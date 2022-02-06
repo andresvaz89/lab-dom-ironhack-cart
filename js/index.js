@@ -9,11 +9,6 @@ function updateSubtotal(product) {
   product.querySelector('.subtotal span').innerHTML = subTotal;
 
   return subTotal;
-
-  window.addEventListener('load', () => {
-    const calculatePricesBtn = document.getElementById('calculate');
-    calculatePricesBtn.addEventListener('click', calculateAll);
-  });
 }
 
 function calculateAll() {
@@ -32,7 +27,8 @@ function calculateAll() {
   });
 
   // ITERATION 3
-  document.getElementById('total-value').innerHTML = totalProducts;
+  document.getElementById('total-value').querySelector('span').innerHTML =
+    totalProducts;
 }
 
 // ITERATION 4
